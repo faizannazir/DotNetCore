@@ -1,0 +1,32 @@
+﻿@model CategoryDto
+@{
+    Layout = null;
+}
+
+<div class="card carousel-dark"> 
+    <div class="card-body">
+        <div class="card-title text-center mb-3">
+            <h3>@(Model?.Id != Guid.Empty ? "Update" : "Create") Category</h3>
+        </div>
+        <form  id="myForm">
+            <input asp-for="Id" name="Id" type="hidden"/>
+            @* Model-level validation errors *@
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+                <label asp-for="TotalOrders" class="form-label"></label>
+                <input asp-for="TotalOrders" class="form-control" />
+                <span asp-validation-for="TotalOrders" class="text-danger"></span>
+</div>
+
+            
+            <input type="button"  onclick="SubmitCategory()" class="btn btn-primary my-3 offset-5" value="submit"/>
+        </form>
+    </div>
+</div>
