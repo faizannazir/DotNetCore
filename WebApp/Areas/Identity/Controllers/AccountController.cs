@@ -3,23 +3,20 @@ using DataTransferObject.Login;
 using DataTransferObject.RegisterDto;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Bussiness.AccountServices;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApp.Areas.Identity.Controllers
 {
     [Area("Identity")]
     public class AccountController : Controller
     {
-        private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public AccountController(SignInManager<ApplicationUser> signInManager,
-            UserManager<ApplicationUser> userManager,
-            RoleManager<IdentityRole> roleManager)
+        private readonly IAccount accountServices;
+
+        public AccountController(IAccount account)
         {
-            _signInManager = signInManager;
-            _userManager = userManager;
-            _roleManager = roleManager;
+           accountServices = account;   
         }
 
         public IActionResult Register()
@@ -33,21 +30,10 @@ namespace WebApp.Areas.Identity.Controllers
         {
             if (ModelState.IsValid)
             {
-                ApplicationUser user = new ApplicationUser();
-                user.Email = registerDto.Email;
-                user.UserName = registerDto.Email;
-                user.Name = registerDto.Name;
-                user.City = registerDto.City;
-                user.State = registerDto.State;
-                user.StreetAddress = registerDto.StreetAddress;
-                user.PostalCode = registerDto.PostalCode;
-
-                IdentityResult result =await _userManager.CreateAsync(user, registerDto.Password);
-                if (result.Succeeded)
+                if (await accountServices.RegisterUserAsync(registerDto))
                 {
                     return RedirectToAction("Login");
                 }
-
             }
             return View(registerDto);
         }
@@ -58,16 +44,11 @@ namespace WebApp.Areas.Identity.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Login(LoginDto obj)
+        public async Task<IActionResult> LoginAsync(LoginDto obj)
         {
             if (ModelState.IsValid)
             {
-
-                var result = _signInManager.PasswordSignInAsync
-                (obj.Email, obj.Password,
-                  obj.RememberMe, false).GetAwaiter().GetResult();
-
-                if (result.Succeeded)
+                if (await accountServices.LoginUser(obj))
                 {
                     return RedirectToAction("Index", "Home", new { area = "Customer" });
                 }
@@ -78,12 +59,11 @@ namespace WebApp.Areas.Identity.Controllers
             return View(obj);
         }
 
-
+        [Authorize]
         public IActionResult Logout()
         {
             // Sign out the user
-            _signInManager.SignOutAsync().GetAwaiter().GetResult();
-
+            accountServices.LogoutUser();
             return RedirectToAction("Index", "Home", new { area = "Customer" });
         }
     }

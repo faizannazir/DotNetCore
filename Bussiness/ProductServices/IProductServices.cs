@@ -6,8 +6,8 @@ namespace Bussiness.ProductServices
 {
     public interface IProductServices
     {
-        Task<ResponseDTO> AddUpdate(ProductDto product);
-        IEnumerable<ProductDto> GetAllProducts();
+        public Task<ResponseDTO> AddUpdate(ProductDto product);
+        public IEnumerable<ProductDto> GetAllProducts();
         public ProductDto GetById(Guid Id);
 
         public Task<bool> Delete(Guid Id);
