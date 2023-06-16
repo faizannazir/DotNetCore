@@ -1,12 +1,11 @@
 ﻿using DataAccess.Entities;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace DataAccess.AppDbContext
 {
-    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         private readonly IConfiguration _configuration;
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOption, IConfiguration configuration) : base(dbContextOption)
