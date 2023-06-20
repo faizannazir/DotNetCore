@@ -2,7 +2,7 @@
 using DataTransferObject.Product;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Bussiness.ProductServices
+namespace Business.ProductServices
 {
     public interface IProductServices
     {

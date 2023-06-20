@@ -1,7 +1,7 @@
 ﻿using DataTransferObject;
 using DataTransferObject.Category;
 
-namespace Bussiness.CategoryServices
+namespace Business.CategoryServices
 {
     public interface ICategoryServices
     {

@@ -1,0 +1,40 @@
+﻿@model IList<RolesDto>
+
+
+<div class="container">
+    <div id="toast-container"></div>
+    <div class="row">
+        <div class="col-6">
+            <h1> Index </h1>
+        </div>
+        <div class="col-3 offset-3">
+            <a class="btn btn-primary" asp-controller="ManageAccounts" asp-action="CreateRole">Create Role</a>
+        </div>
+   </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped p-3 ">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var roles in Model)
+                {
+                <tr>
+                    <td>@roles.Name</td>
+                    <td>@roles.Description</td>
+                    <td>
+                            <a class="btn btn-primary" asp-controller="ManageAccounts" asp-action="UpdateRole" asp-route-id="@roles.Id">Edit</a>
+                            <a class="btn btn-danger" asp-controller="ManageAccounts" asp-action="DeleteRole" asp-route-id="@roles.Id">Delete</a>
+                    </td>
+                </tr> 
+                }
+               
+            </tbody>
+        </table>
+    </div>
+</div>

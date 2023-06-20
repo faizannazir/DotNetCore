@@ -1,19 +1,20 @@
 ﻿using DataAccess.Entities;
 using DataTransferObject.Login;
 using DataTransferObject.RegisterDto;
+using Enums;
 using Microsoft.AspNetCore.Identity;
 
-namespace Bussiness.AccountServices
+namespace Business.AccountServices
 {
     public class Account :IAccount
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly RoleManager<ApplicationRoles> _roleManager;
 
         public Account(SignInManager<ApplicationUser> signInManager,
             UserManager<ApplicationUser> userManager,
-            RoleManager<IdentityRole> roleManager)
+            RoleManager<ApplicationRoles> roleManager)
         {
             _signInManager = signInManager;
             _userManager = userManager;
@@ -34,6 +35,7 @@ namespace Bussiness.AccountServices
 
         public async Task<bool> RegisterUserAsync(RegisterDto registerDto)
         {
+
             ApplicationUser user = new ApplicationUser();
             user.Email = registerDto.Email;
             user.UserName = registerDto.Email;
@@ -42,9 +44,12 @@ namespace Bussiness.AccountServices
             user.State = registerDto.State;
             user.StreetAddress = registerDto.StreetAddress;
             user.PostalCode = registerDto.PostalCode;
-
+           
             IdentityResult result = await _userManager.CreateAsync(user, registerDto.Password);
+            await _userManager.AddToRoleAsync(user,UserRoles.Role_Customer);
             return result.Succeeded;
         }
+
+
     }
 }

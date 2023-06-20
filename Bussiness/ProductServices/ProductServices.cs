@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
-namespace Bussiness.ProductServices
-{
+namespace Business.ProductServices
+{       
     public class ProductServices : IProductServices
     {
         private readonly IProductRepository _productRepository;

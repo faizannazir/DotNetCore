@@ -1,6 +1,7 @@
-﻿using Bussiness.AccountServices;
-using Bussiness.CategoryServices;
-using Bussiness.ProductServices;
+﻿using Business.AccountServices;
+using Business.CategoryServices;
+using Business.ProductServices;
+using Business.RoleServices;
 using Common;
 using DataAccess.GenericRepository;
 using DataAccess.Repositories.CategoryRepository;
@@ -22,6 +23,7 @@ namespace WebApp
             webAppBuilder.Services.AddScoped<ICategoryServices,CategoryServices>();
             webAppBuilder.Services.AddScoped<IProductServices, ProductServices>();
             webAppBuilder.Services.AddScoped<IAccount, Account>();
+            webAppBuilder.Services.AddScoped<IRoleServices, RoleServices>();
 
             webAppBuilder.Services.AddScoped<IEmailSender, EmailSender>();
         }

@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bussiness", "Bussiness\Bussiness.csproj", "{BF9FFCE3-96BB-4AB1-8C33-A4E6764FCC01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Bussiness\Business.csproj", "{BF9FFCE3-96BB-4AB1-8C33-A4E6764FCC01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{06BF8118-F8EB-48AC-A53E-A203A236E2FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{06BF8118-F8EB-48AC-A53E-A203A236E2FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enums", "Enums\Enums.csproj", "{5B13B467-4340-4FF3-AD98-E21C76407524}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enums", "Enums\Enums.csproj", "{5B13B467-4340-4FF3-AD98-E21C76407524}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransferObject", "DataTransferObject\DataTransferObject.csproj", "{651EB056-65E9-44A3-9835-47852CD92551}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataTransferObject", "DataTransferObject\DataTransferObject.csproj", "{651EB056-65E9-44A3-9835-47852CD92551}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{74003F7A-7933-4AC8-998C-9C301DE1812F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{74003F7A-7933-4AC8-998C-9C301DE1812F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

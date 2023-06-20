@@ -1,4 +1,4 @@
-﻿using Bussiness.ProductServices;
+﻿using Business.ProductServices;
 using DataTransferObject;
 using DataTransferObject.Product;
 using Enums;
@@ -67,44 +67,3 @@ namespace WebApp.Areas.Admin.Controllers
 
     }
 }
-
-
-
-
-
-
-
-//if (productDto.File != null || !string.IsNullOrEmpty(productDto.ImageUrl))
-//{
-//    string webRootPath = _webHostEnvironment.WebRootPath;
-//    string productImagePath = @"images\Products";
-
-//    if (productDto.File != null)
-//    {
-//        string extension = Path.GetExtension(productDto.File.FileName);
-//        string fileName = Guid.NewGuid().ToString() + extension;
-//        string productPath = Path.Combine(webRootPath, productImagePath, fileName).TrimEnd('\\');
-//        productDto.ImageUrl = @"\images\products\" + fileName;
-//        if (extension != null && (extension.Equals(".jpg", StringComparison.OrdinalIgnoreCase)
-//            || extension.Equals(".jpeg", StringComparison.OrdinalIgnoreCase)
-//            || extension.Equals(".png", StringComparison.OrdinalIgnoreCase)
-//            || extension.Equals(".gif", StringComparison.OrdinalIgnoreCase)))
-//        {
-//            using (var filestream = new FileStream(productPath, FileMode.Create))
-//            {
-//                await productDto.File.CopyToAsync(filestream);
-//            }
-//        }
-//        else
-//        {
-//            ModelState.AddModelError("File", "Please upload an image file.");
-//            return View(productDto);
-//        }
-//    }
-
-//}
-//else
-//{
-//    ModelState.AddModelError("File", "Please upload an image file.");
-//    return View(productDto);
-//}

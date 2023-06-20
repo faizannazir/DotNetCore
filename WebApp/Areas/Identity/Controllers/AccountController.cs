@@ -1,10 +1,8 @@
-﻿using DataAccess.Entities;
+﻿using Business.AccountServices;
 using DataTransferObject.Login;
 using DataTransferObject.RegisterDto;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Bussiness.AccountServices;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Areas.Identity.Controllers
 {
@@ -65,6 +63,11 @@ namespace WebApp.Areas.Identity.Controllers
             // Sign out the user
             accountServices.LogoutUser();
             return RedirectToAction("Index", "Home", new { area = "Customer" });
+        }
+
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
     }
 }

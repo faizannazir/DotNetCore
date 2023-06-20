@@ -3,7 +3,7 @@ using DataAccess.Repositories.CategoryRepository;
 using DataTransferObject;
 using DataTransferObject.Category;
 
-namespace Bussiness.CategoryServices
+namespace Business.CategoryServices
 {
     public class CategoryServices : ICategoryServices
     {

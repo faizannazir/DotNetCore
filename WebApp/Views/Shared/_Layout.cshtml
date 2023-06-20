@@ -30,12 +30,25 @@
                         </li>
                         @if(User.IsInRole(UserRoles.Role_Admin))
                         {
-                                                    <li class="nav-item">
+                            <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
-                        </li>
+                            </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">Products</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark asp-area="Admin" asp-controller="ManageAccounts" asp-action="Index">UserRoles</a>
+                        </li>
+@*                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Manage Users and Roles
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="ManageAccounts" asp-action="Index">Roles</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="ManageAccounts" asp-action="Index" >Users</a>
+                                </div>
+                            </li>*@
                         }
 
                     </ul>

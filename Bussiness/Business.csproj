@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
     <ProjectReference Include="..\DataTransferObject\DataTransferObject.csproj" />
+    <ProjectReference Include="..\Enums\Enums.csproj" />
   </ItemGroup>
 
 </Project>
