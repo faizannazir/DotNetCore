@@ -4,14 +4,17 @@ using DataTransferObject.Category;
 using Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq.Dynamic.Core;
+using Microsoft.AspNetCore.Http;
+using System.Net.Http;
+using Common;
 
 namespace WebApp.Areas.Admin.Controllers
 {
     [BindProperties]
-    [Area("Admin"),Authorize(Roles = UserRoles.Role_Admin)]
+    [Area("Admin"), Authorize(Roles = UserRoles.Role_Admin)]
     public class CategoryController : Controller
     {
-
         private readonly ICategoryServices _categoryServices;
         public CategoryController(ICategoryServices categoryServices)
         {
@@ -64,5 +67,41 @@ namespace WebApp.Areas.Admin.Controllers
         }
 
 
+
+
+        public async Task<IActionResult> GetPaginatedCategory()
+        {
+            try
+            {
+                var pagination =  PaginationParameter.Pagination(HttpContext);
+                //var test = HttpContext.Request.Query["draw"];
+
+                int recordsTotal = 0;
+                var customerData = _categoryServices.GetAllCategoriesDatatable();
+                if (!(string.IsNullOrEmpty(pagination.sortColumn) && string.IsNullOrEmpty(pagination.sortColumnDirection)))
+                {
+                    customerData = customerData.OrderBy(pagination.sortColumn + " " + pagination.sortColumnDirection);
+                }
+                if (!string.IsNullOrEmpty(pagination.searchValue))
+                {
+                    customerData = customerData.Where(m => m.Name.Contains(pagination.searchValue));
+                }
+                recordsTotal = customerData.Count();
+                var data = customerData.Skip(pagination.skip).Take(pagination.take).ToList();
+                var jsonData = new { pagination.draw, recordsFiltered = recordsTotal, recordsTotal = recordsTotal, data = data };
+                return Ok(jsonData);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public async Task<IActionResult> GetAllCategoriesForView()
+        {
+            var paginationParameter = PaginationParameter.Pagination(HttpContext);
+            var data = await _categoryServices.GetAllCategoriesServerSideGrid(paginationParameter);
+            return Json(new { paginationParameter.draw, recordsFiltered = data.Key, recordsTotal = data.Key, data = data.Value });
+        }
     }
 }

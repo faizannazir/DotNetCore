@@ -2,6 +2,8 @@
 using DataAccess.Repositories.CategoryRepository;
 using DataTransferObject;
 using DataTransferObject.Category;
+using Microsoft.EntityFrameworkCore;
+using System.Linq.Dynamic.Core;
 
 namespace Business.CategoryServices
 {
@@ -73,6 +75,16 @@ namespace Business.CategoryServices
 
         }
 
+        public IQueryable<Category> GetAllCategoriesDatatable()
+        {
+            return _categoryRepository.GetAll();
+            //    .Select(c => new Category
+            //    {
+            //    Name = c.Name,
+            //    TotalOrders = c.TotalOrders
+            //});
+        }
+
 
         //Get Single By Id 
 
@@ -87,6 +99,39 @@ namespace Business.CategoryServices
             categoryDto.Name = category.Name;
             categoryDto.TotalOrders = category.TotalOrders;
             return categoryDto;
+        }
+
+
+        // Pagination key value pair
+        public async Task<KeyValuePair<int, List<CategoryDto>>> GetAllCategoriesServerSideGrid(Pagination pagination)
+        {
+            var query = _categoryRepository.GetReadOnlyList().Where(x => x.IsDeleted != true)
+                .Include(x => x.Products).OrderByDescending(x => x.Id).AsQueryable();
+            pagination.searchValue = string.IsNullOrEmpty(pagination.searchValue) ? null : pagination.searchValue;
+            if (!string.IsNullOrEmpty(pagination.searchValue))
+            {
+                query = query.Where(x => x.Name.Contains(pagination.searchValue.Trim().ToLower()));
+            }
+            var dataQuery = query.Select(x => new CategoryDto
+            {
+                Name = x.Name,
+                TotalOrders = x.TotalOrders,
+                Id = x.Id
+            });
+
+            dataQuery = dataQuery.OrderBy($"{pagination.sortColumn} {pagination.sortColumnDirection}");
+            var totalRecord = dataQuery.Count();
+            if (pagination.take > 0)
+            {
+                int count = 0;
+                var PendingList = await dataQuery.Skip(pagination.skip).Take(pagination.take).ToListAsync();
+                return new KeyValuePair<int, List<CategoryDto>>(totalRecord, PendingList);
+            }
+            else
+            {
+                var PendingList = await dataQuery.Take(totalRecord).ToListAsync();
+                return new KeyValuePair<int, List<CategoryDto>>(totalRecord, PendingList);
+            }
         }
 
     }

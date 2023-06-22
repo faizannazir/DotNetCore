@@ -10,15 +10,11 @@ namespace Business.AccountServices
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly RoleManager<ApplicationRoles> _roleManager;
 
-        public Account(SignInManager<ApplicationUser> signInManager,
-            UserManager<ApplicationUser> userManager,
-            RoleManager<ApplicationRoles> roleManager)
+        public Account(SignInManager<ApplicationUser> signInManager,UserManager<ApplicationUser> userManager)
         {
             _signInManager = signInManager;
             _userManager = userManager;
-            _roleManager = roleManager;
         }
 
         public async Task<bool> LoginUser(LoginDto loginDto)
@@ -51,5 +47,28 @@ namespace Business.AccountServices
         }
 
 
+        //public async Task<string> JWTGenerator(ApplicationUser user)
+        //{
+
+        //   var jwTokenHandler = new JwtSecurityTokenHandler();
+        //    var key = Encoding.UTF8.GetBytes(_jwtConfig.SecretKey);
+        //    var tokenDescriptor = new SecurityTokenDescriptor()
+        //    {
+        //        Subject = new ClaimsIdentity(new[]
+        //        {
+        //            new Claim("Id", user.Id),
+        //            new Claim(JwtRegisteredClaimNames.Sub, user.Email),
+        //            new Claim(JwtRegisteredClaimNames.Email, user.Email),
+        //            new Claim(JwtRegisteredClaimNames.Jti, new Guid().ToString()),
+        //            new Claim(JwtRegisteredClaimNames.Iat, DateTime.Now.ToUniversalTime().ToString()),
+        //        }),
+        //        Expires = DateTime.Now.AddHours(1),
+        //        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),SecurityAlgorithms.HmacSha256),
+        //    };
+
+        //    var token = jwTokenHandler.CreateToken(tokenDescriptor);
+        //    var jwtToken = jwTokenHandler.WriteToken(token);
+        //    return jwtToken;
+        //}
     }
 }

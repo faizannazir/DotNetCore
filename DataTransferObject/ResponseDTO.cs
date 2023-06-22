@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DataTransferObject
+﻿namespace DataTransferObject
 {
     public class ResponseDTO
     {
@@ -13,6 +7,8 @@ namespace DataTransferObject
         public int StatusCode { get; set; }
         public string Message { get; set; }
         public string Url{ get; set;}
-        public Exception Error { get; set; }
+
+        public string Token { get; set; }
+        public IList<string> Errors { get; set; }
     }
 }

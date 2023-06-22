@@ -1,7 +1,9 @@
 ﻿using Business.AccountServices;
+using DataAccess.Entities;
 using DataTransferObject.Login;
 using DataTransferObject.RegisterDto;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Areas.Identity.Controllers
@@ -11,10 +13,12 @@ namespace WebApp.Areas.Identity.Controllers
     {
 
         private readonly IAccount accountServices;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public AccountController(IAccount account)
+        public AccountController(IAccount account, UserManager<ApplicationUser> userManager)
         {
-           accountServices = account;   
+            accountServices = account;
+            _userManager = userManager;
         }
 
         public IActionResult Register()
@@ -28,10 +32,18 @@ namespace WebApp.Areas.Identity.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (await accountServices.RegisterUserAsync(registerDto))
+                if (await _userManager.FindByEmailAsync(registerDto.Email) == null)
                 {
-                    return RedirectToAction("Login");
+                    if (await accountServices.RegisterUserAsync(registerDto))
+                    {
+                        return RedirectToAction("Login");
+                    }
                 }
+                else
+                {
+                    ModelState.AddModelError(nameof(registerDto.Email), "Email already registered");
+                }
+
             }
             return View(registerDto);
         }
