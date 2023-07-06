@@ -42,7 +42,8 @@ namespace Business.AccountServices
             user.PostalCode = registerDto.PostalCode;
            
             IdentityResult result = await _userManager.CreateAsync(user, registerDto.Password);
-            await _userManager.AddToRoleAsync(user,UserRoles.Role_Customer);
+            await _userManager.AddToRoleAsync(user, UserRoles.Role_Customer);
+            //await _userManager.AddToRoleAsync(user,UserRoles.Role_Admin);
             return result.Succeeded;
         }
 

@@ -4,10 +4,9 @@
 <div class="card carousel-dark">
     <div class="card-body">
         <div class="card-title text-center mb-3">
-            <h3>Update Role</h3>
+            <h3>Create Role</h3>
         </div>
-        <form id="myForm" method="post">
-            <input type="hidden" asp-for="Id" />
+        <form id="myForm">
             @* Model-level validation errors *@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -24,7 +23,7 @@
             </div>
 
 
-            <input type="submit" class="btn btn-primary my-3 offset-5" value="submit" />
+            <input type="button" class="btn btn-primary my-3 offset-5" value="submit" onclick="CreateRolePost()" />
         </form>
     </div>
 </div>

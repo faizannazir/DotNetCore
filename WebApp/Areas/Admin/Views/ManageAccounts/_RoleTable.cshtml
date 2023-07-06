@@ -1,0 +1,25 @@
+﻿<table class="table table-bordered table-striped p-3 " id="myTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var roles in Model)
+        {
+            <tr>
+                <td>@roles.Name</td>
+                <td>@roles.Description</td>
+                <td class="text-center">
+                    @*<a class="btn btn-primary" asp-controller="ManageAccounts" asp-action="UpdateRole" asp-route-id="@roles.Id">Edit</a>*@
+                    <a class="btn btn-primary px-4 mx-4" onclick="UpdateRoleGet('@roles.Id')" data-bs-toggle="modal" data-bs-target="#Modal">Edit</a>
+                    @*<a class="btn btn-danger" asp-controller="ManageAccounts" asp-action="DeleteRole" asp-route-id="@roles.Id">Delete</a>*@
+                    <a class="btn btn-danger " onclick="DeleteRoleGet('@roles.Id')" data-bs-toggle="modal" data-bs-target="#Modal">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

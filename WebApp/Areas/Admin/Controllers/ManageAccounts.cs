@@ -22,25 +22,27 @@ namespace WebApp.Areas.Admin.Controllers
 
         public IActionResult CreateRole()
         {
-            return View();
+            return PartialView("_CreateRole");
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateRole(RolesDto rolesDto)
-        { 
-            if(ModelState.IsValid)
+        {
+            if (ModelState.IsValid)
             {
-            if(await roleServices.CreateRole(rolesDto))
-            {
-                return RedirectToAction("Index", "ManageAccounts", new { areas="Admin" });
+                if (await roleServices.CreateRole(rolesDto))
+                {
+                    return Json(new {success = true});
+                }
             }
-            }
-            return View();
+            var partialView = PartialView("_CreateRole", rolesDto);
+            //return Json(new ResponseDTO() { IsSuccessful = false, ViewResult = partialView});
+            return partialView;
         }
 
         public IActionResult UpdateRole(string Id)
         {
-            return View(roleServices.GetRole(Id));
+            return PartialView("_UpdateRole",roleServices.GetRole(Id));
         }
 
         [HttpPost]
@@ -50,15 +52,15 @@ namespace WebApp.Areas.Admin.Controllers
             {
                 if (await roleServices.UpdateRole(rolesDto))
                 {
-                   return RedirectToAction("Index","ManageAccounts",new { areas = "Admin" });
+                    return Json(new { success = true });
                 }
             }
-            return View();
+            return PartialView("_UpdateRole",rolesDto);
         }
 
         public IActionResult DeleteRole(string Id)
         {
-            return View(roleServices.GetRole(Id));
+            return PartialView("_DeleteRole",roleServices.GetRole(Id));
         }
 
         [HttpPost,ActionName("DeleteRole")]
@@ -66,9 +68,16 @@ namespace WebApp.Areas.Admin.Controllers
         {
             if (await roleServices.DeleteRole(Id))
             {
-                return RedirectToAction("Index", "ManageAccounts", new { areas = "Admin" });
+                return Json(new { success = true });
             }
-            return View();
+            return PartialView("_DeleteRole");
+        }
+
+
+
+        public async Task<IActionResult> RolesList()
+        {
+            return PartialView("_RoleTable",roleServices.RoleList());
         }
     }
 }

@@ -25,17 +25,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model)
+@*                        @foreach (var item in Model)
                         {
                             <tr>
                                 <td>@item.Name</td>
                                 <td>@item.TotalOrders</td>
-                @*                <td>
+                              <td>
                                     <a onclick="CreateUpdateCategory('@item.Id')" data-bs-toggle="modal" data-bs-target="#Modal" class="btn btn-primary mx-3 px-4">Edit</a>
                                     <a onclick="confirmDelete('@item.Id')" class="btn btn-danger" asp-route-id="@item.Id">Delete</a>
-                                </td>*@
+                                </td>
                             </tr>
-                        }
+                        }*@
                     </tbody>
 
                 </table>
@@ -51,6 +51,8 @@
 
 @section Scripts
     {
+    <!--  Validation Scripts -->
+    <partial name="_ValidationScriptsPartial" />
     <!-- Toastr js-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 

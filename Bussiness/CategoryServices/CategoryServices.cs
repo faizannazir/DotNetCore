@@ -123,7 +123,6 @@ namespace Business.CategoryServices
             var totalRecord = dataQuery.Count();
             if (pagination.take > 0)
             {
-                int count = 0;
                 var PendingList = await dataQuery.Skip(pagination.skip).Take(pagination.take).ToListAsync();
                 return new KeyValuePair<int, List<CategoryDto>>(totalRecord, PendingList);
             }

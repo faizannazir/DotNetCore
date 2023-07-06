@@ -8,13 +8,9 @@ using DataAccess.Entities;
 using DataAccess.GenericRepository;
 using DataAccess.Repositories.CategoryRepository;
 using DataAccess.Repositories.ProductRepository;
-using DataTransferObject;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 
 namespace WebApp
 {
@@ -43,7 +39,7 @@ namespace WebApp
             webAppBuilder.Services.AddScoped<IEmailSender, EmailSender>();
             webAppBuilder.Services.AddHttpContextAccessor();
 
-            //// JWT configuration 
+            // JWT configuration 
             //         // dotnet user-jwts create
             //webAppBuilder.Services.Configure<JWTConfig>(webAppBuilder.Configuration.GetSection("JWTConfig"));
             //webAppBuilder.Services.AddAuthentication(
