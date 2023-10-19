@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model MVCWebApp.Models.Employee
+@{
+}
+
+@using (Html.BeginForm("AddEmployee", "HelloWorld"))
+{
+    @Html.LabelFor(Model => Model.Name, new { @class = "form-label" })
+    @Html.TextBoxFor(Model => Model.Name, new { placeholder = "Enter name", @class = "form-control" })
+    @Html.ValidationMessageFor(Model => Model.Name,"",new{@class="text-danger"})
+    <br />
+
+    @Html.LabelFor(Model => Model.Number, new { @class = "form-label" })
+    @Html.TextBoxFor(Model => Model.Number, new { placeholder = "Enter your Number", @class = "form-control" })
+    @Html.ValidationMessageFor(Model => Model.Number,"",new{@class="text-danger"})
+    <br />
+    <br />
+    <input type="submit" class="btn btn-primary form-control" />
+    
+}  
+ @*Validation Summary error *@
+<div class="container">
+    @Html.ValidationSummary("",new{@class="text-danger"})
+</div>

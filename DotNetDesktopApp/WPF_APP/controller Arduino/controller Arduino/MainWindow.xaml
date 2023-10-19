@@ -1,0 +1,14 @@
+﻿<Window x:Class="controller_Arduino.MainWindow"    
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"    
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+        Title="Controller for Arduino v1" Height="750" Width="1020">
+    <Grid>
+        <Button x:Name="on" Content="On" HorizontalAlignment="Left" Margin="136,164,0,0" VerticalAlignment="Top" Width="87" Height="52" Click="on_Click"/>
+        <Button x:Name="Of" Content="Off" HorizontalAlignment="Left" Margin="246,164,0,0" VerticalAlignment="Top" Width="87" Height="52" Click="Of_Click"/>
+        <TextBlock x:Name="status" HorizontalAlignment="Left" Margin="506,253,0,0" TextWrapping="Wrap" Text="Disconnected" VerticalAlignment="Top" Height="29" Width="94"/>
+        <TextBox x:Name="comportno" HorizontalAlignment="Left" Height="23" Margin="506,164,0,0" TextWrapping="Wrap" Text="COM13" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="Connect" Content="Connect" HorizontalAlignment="Left" Margin="506,199,0,0" VerticalAlignment="Top" Width="55" Height="24" Click="Connect_Click"/>
+        <Button x:Name="Disconnect" Content="Disconnect" HorizontalAlignment="Left" Margin="571,199,0,0" VerticalAlignment="Top" Width="55" Height="24" Click="Disconnect_Click"/>
+
+    </Grid>
+</Window>   

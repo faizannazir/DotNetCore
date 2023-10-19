@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "HelloWorld";
+}
+
+
+<h3> Hello World!</h3>
+
+<p>
+    @TempData["message"] 
+    @ViewBag.Name !
+    <br />
+    Your id is @ViewData["id"]
+</p>
+
+@{
+    Html.BeginForm("Index", "HelloWorld");
+}
+@Html.Label("First Name","First Name",new{@class = "form-label"})
+@Html.TextBox("First Name","",new{placeholder = "Enter First name",@class = "form-control"})
+@*@Html.ValidationMessage("First Name")*@
+<br />
+
+@Html.Label("Last Name","Last Name",new{@class = "form-label"})
+@Html.TextBox("Last Name", "",new{placeholder = "Enter Last name",@class = "form-control"})
+@*@Html.ValidationMessage("Last Name")*@
+<br/>
+
+@Html.Label("Email","Email",new{@class = "form-label"})
+@Html.TextBox("Email","", new{placeholder = "Enter Email address", type = "email", @class="form-control"})
+@*@Html.ValidationMessage("Email")*@
+<br />
+@Html.Label("Male","Male",new{@class = "form-label"})
+@Html.RadioButton("Gender","Male",true)
+@Html.Label("Female","Female",new{@class = "form-label"})
+@Html.RadioButton("Gender","Female")
+@*@Html.ValidationMessage("Gender")*@
+<br />
+@Html.Label("countryList","Country",new{@class = "form-label"})
+@Html.DropDownList("countryList", new SelectList(new []  {"Pakistan","China","India","Australia","America"}),"Choose Country",new{@class = "form-select"})
+@*@Html.ValidationMessage("countryList")*@
+<br />
+@Html.Label("pass","Password",new{@class = "form-label"})
+@Html.Password("pass","",new{@class = "form-control"})
+@*@Html.ValidationMessage("pass")*@
+<br />
+<br />
+<input type="submit" class="btn btn-primary form-control"/>
+@{
+    Html.EndForm();
+}

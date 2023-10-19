@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "controller Arduino", "controller Arduino\controller Arduino.csproj", "{14675E90-E0F4-495B-870E-227A7F1A6987}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14675E90-E0F4-495B-870E-227A7F1A6987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14675E90-E0F4-495B-870E-227A7F1A6987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14675E90-E0F4-495B-870E-227A7F1A6987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14675E90-E0F4-495B-870E-227A7F1A6987}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BF07067-F4D4-4F4B-A8BD-DA3E6E56142C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,13 @@
+﻿<div class="row">
+    @if (TempData["done"] != null)
+    {
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        // Display a success toast, with a title
+        <script>
+            toastr.success('@TempData["done"]')
+        </script>
+
+        @* <h2> @TempData["done"] </h2>*@
+    }
+</div>

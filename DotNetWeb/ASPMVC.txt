@@ -1,0 +1,220 @@
+// Day 1 
+MVC 5
+
+MVC is a loosely coupled
+(database, C#, Html)code are divided in diff files Model view Controller
+ 
+ MODEL
+ Model are C# classes
+ Used for Database operations (CRUD)
+ store web data 
+ 
+ VIEW
+End user GUI with which user interact 
+Html CSS Bootstrap
+Presentation logic to present data to user 
+
+Controller
+Classes in C# 
+contain logic and provide link between model and view
+handles users requests
+get data from database
+return view to user 
+handles exceptions 
+
+1 action method bind with 1 view
+
+User -> Request -> Controller -> Get Data From Model -> Send to View - > show to user
+                               -> if No data update View
+							   
+							   
+
+Action methods send back response 
+1 controller can contain different Actions methods
+Controller is responsible for every requests
+
+Action must be public 
+action invoked by url by providing controller then action 
+
+Razor syntax can be placed inside html file cshtml(view) file
+example
+@ var h = "Hello";
+Multiple lines 
+@{
+var a = "a";
+var b = "b";
+}
+Razor view engine convert C# code to html before rendering html
+
+
+Passing data from controller to view
+1) View Data 2) ViewBag  3) TempData
+
+1)View Data
+it is object of ViewDataDictionary class
+it is a dictionary type key value pair 
+you can add key in controller and then access it in view 
+access using razer syntax
+can store array,list and Obj of class 
+when iterate need to convert to array type (string[] )ViewData["Fruits"]
+and for list to list    (List<string>) ViewData["Fruits"]
+for object  (Employee)ViewData["Employee"]
+
+Exist only in current request cannot send to other view
+not show error at compile time 
+if misspelled give error at run time 
+
+
+2) ViewBag
+Same as VIEWDATA  in viewbag we create and access variable using . instead of key
+ViewBag.Message = "Message"
+this is dynamic type variable datatype decided on run time 
+
+Did not need to typecast it will do automatically for us
+Did not provide error on compile time  
+
+
+ViewBag and ViewData can access each other data
+
+3) TempData
+Temp Data is dictionary object derived from TempDataDictionary class
+
+TempData stores data as key-value pairs 
+Syntax is same as ViewData syntax
+must cast value like ViewData
+can pass data to other subsequent request view unlike previous 2  
+first req -> second request (data recieved) -> third request data will be null
+to recieve in 3rd request we can call TempData.keep() to save temp data
+to avoid run time error on redirecting view can check data if its null or not
+
+
+
+Session 
+
+session is also used to pass data within asp.net app  and unlike Temp data
+Session persists for its expiration time 20 minutes default value
+
+Session is also key value pair syntax is 
+Session["key"] = value 
+It also require Type Casting 
+Session slow down app use wisely
+                                              (1-10) videos
+
+
+// Day2 //
+Html Helpers  new tag helper 
+Layout View (Master Page)
+Strongly typed view (work with model objects) Add model at top of html 
+Partial View 
+Strongly typed partial view
+Strongly typed html helpers (model => model.Id )
+HTTP POST method 
+Data Annotation
+Validation Message
+Validation Summary
+regex for Validation
+                                             (11-20 ) videos
+
+running js from Html helper Raw method 
+Data Annotation
+
+Sending error message from required data Annotation
+
+Annotations
+EmailAddress Annotation
+required Annotation 
+Regular Expression Annotation
+Range                            check if value is in rang
+String                           Length check length 
+Compare                         compare 2 fields
+readonly                        to make field read only 
+DisplayName                     to set name to show on field
+scaffold column data Annotation
+
+DataType  work with editorfor     
+                                          Bootstrap apply in editorfor   new { htmlAttributes = new{@class = "form-control"}}
+
+                                                                     [Required (ErrorMessage =" Please provide your email")]
+                                                                     [EmailAddress (ErrorMessage ="Please Enter Valid Email Address")]
+
+Database string binding
+Context 
+migration 
+update db 
+
+Create 
+Read 
+(21 - 31 videos)
+
+Day 3
+code first approach continue
+update 
+delete
+detail
+
+DataBase first approach
+Adding existing database to models 
+
+command to generate models from existing database tables
+Scaffold-Dbcontext "Server=(localdb)\MSSQLLocalDB; Database=DataBaseFirstEF; Trusted_Connection = True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+after generation move connection string to appsetting json file
+and Add dbset service in program.cs 
+and remove both from generated context files 
+
+scaffold controller and view generation
+scaffoldcolumn data Annotation used to stop scaffold from generating input field for model property
+
+Session
+Cookies 
+non persistants  (expire when browser session expired) stored in browser
+persistants (timing set by developer) stored in hard drive file 
+
+Cookies used for client side 
+Sessions used for server side
+(32 - 39 videos)
+
+Implemented search functionality
+Dependcy Injection 
+Ajax 
+Asynchronous vs Synchronous
+
+theory about filters 
+Filters
+1 Authentication Filters
+2 Authorization Filters
+3 Action Filters
+4 Result Filters
+5 Exception Filters
+
+Filters can be applied at
+1 action level 
+2 controller level
+3 application leve
+
+
+
+Ajax Post data
+Apply filters on data
+Data Annotations for models
+file upload form
+
+
+Foreign key 
+one to many 
+save file in physical storage from form
+jquery
+ajax
+
+
+
+
+
+
+
+
+
+Filters
+Sessions
+Cookies
+login 

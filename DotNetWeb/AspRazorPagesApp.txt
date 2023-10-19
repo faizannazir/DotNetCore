@@ -1,0 +1,32 @@
+Create Db Model 
+Db Connection String 
+Db Context File 
+Installed Db Packages 
+Add Db Service inside Program.cs
+Make Migration
+Update Database
+index page to show db data index
+create  page to add new entry in database 
+
+
+added server side validation 
+client side validation
+Bind Property  and Bind Properties
+
+asp-page
+asp-for
+asp-validation-for
+foreach loop
+C# comment inside html file
+section scripts 
+
+changes bootstap to new cybog style sheet from bootswatch
+boot strap icons and some bootstrap styling 
+
+asp-route-id
+Edit 
+Delete
+Pass id through onGet
+temp data
+toaster js
+Partial page (Razer view)

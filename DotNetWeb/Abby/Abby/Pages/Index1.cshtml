@@ -1,0 +1,17 @@
+﻿@page
+@model Abby.Pages.Index1Model
+@{
+    ViewData["Title"] = "test page";
+    var message = "This is testing page ";
+    var date = DateTime.Now;
+}
+
+<p> @message </p>
+
+<p> Today date is @date.ToString("d")</p>
+
+<form method="post" asp-page="/Index">
+
+
+    
+</form>

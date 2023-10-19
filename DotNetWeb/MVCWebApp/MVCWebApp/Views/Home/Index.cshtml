@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<nav class"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <ul>
+   <li>@Html.ActionLink("Index","Index","Home")</li>
+   <li>@Html.ActionLink("Privacy","Privacy","Home")</li>
+   <li>@Html.ActionLink("Str","Str","Home")</li>
+   <li>@Html.ActionLink("Integer","Integer","Home")</li>
+   <li>@Html.ActionLink("2nd Controller","Index","HelloWorld",new { area = "" })</li>
+   <li><a href="@Url.Action("Index","HelloWorld")">Url Action</a></li>
+
+        <li> <a asp-area="" asp-controller="HelloWorld" asp-action="Welcome">Welcome</a></li>
+        <li> <a asp-area="" asp-controller="HelloWorld" asp-action="AddEmployee">AddEmployee</a></li>
+        <li> <a asp-area="" asp-controller="Student" asp-action="Index">Student</a></li>
+   </ul>
+</nav>

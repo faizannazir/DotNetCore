@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model MVCWebApp.Models.Employee
+@{
+    var emp = (MVCWebApp.Models.Employee) ViewData["emp"];
+}
+@if(emp != null)
+{
+<h3>Employee Id is: <strong>@emp.Id</strong> </h3>
+<h3>Employee Name is: <strong>@emp.Name </strong></h3>
+<h3>Employee Phone Number is: <strong>@emp.Number</strong></h3>
+}
+<br />
+<h1> Strongly Typed View </h1>
+@if(Model != null)
+{
+<h3>Employee Id is: <strong>@Model.Id</strong> </h3>
+<h3>Employee Name is: <strong>@Model.Name </strong></h3>
+<h3>Employee Phone Number is: <strong>@Model.Number</strong></h3>
+}
+
+
+
+
+
+ 
+
