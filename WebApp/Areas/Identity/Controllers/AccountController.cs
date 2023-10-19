@@ -62,6 +62,7 @@ namespace WebApp.Areas.Identity.Controllers
                 {
                     return RedirectToAction("Index", "Home", new { area = "Customer" });
                 }
+                //return Ok(await accountServices.LoginUser(obj));
 
                 ModelState.AddModelError("", "Invalid credentials!");
             }

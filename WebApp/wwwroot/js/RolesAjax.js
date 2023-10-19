@@ -1,6 +1,8 @@
 ﻿// Get List of Role
 function GetRolesList() {
     $("#Modal").modal('hide');
+    // Use any selector
+    $("head").append(s);
     $.ajax({
         type: 'Get',
         url: '/Admin/ManageAccounts/RolesList/',

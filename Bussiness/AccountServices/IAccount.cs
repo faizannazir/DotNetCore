@@ -1,4 +1,5 @@
-﻿using DataTransferObject.Login;
+﻿using DataTransferObject;
+using DataTransferObject.Login;
 using DataTransferObject.RegisterDto;
 using Microsoft.AspNetCore.Mvc;
 using System;

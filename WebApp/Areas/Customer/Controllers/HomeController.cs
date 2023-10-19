@@ -1,4 +1,5 @@
 ﻿using Business.ProductServices;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -22,7 +23,6 @@ namespace WebApp.Areas.Customer.Controllers
         {
             return View(_productServices.GetAllProducts());
         }
-
 
         [Authorize]
         public IActionResult Privacy()
