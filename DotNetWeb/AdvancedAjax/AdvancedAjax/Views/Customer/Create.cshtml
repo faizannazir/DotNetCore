@@ -1,0 +1,100 @@
+﻿@model AdvancedAjax.Models.Customer
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Customer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" id="form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Countryld" class="control-label"></label>
+                <select asp-for="Countryld" class="form-control" asp-items="ViewBag.CountryId" onchange="getCities()" id="country"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cityld" class="control-label"></label>
+                <select asp-for="Cityld" class ="form-control" asp-items="ViewBag.Cityld" id="city"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Photourl" class="control-label"></label>
+                <input asp-for="Photourl" class="form-control" />
+                <span asp-validation-for="Photourl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <button onclick="create()">CreateAjax</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+    
+$(document).ready(function(){
+    getCities();
+});
+
+    function getCities()
+    {
+            $.ajax({
+                cache: false,
+                url: '@Url.Action("getCities", "Customer")',
+                type: 'Get',
+            data: { countryId: $("#country").val() },
+                success: function (data) {
+                    var items = "";
+                    $.each(data, function (i, item) {
+                    items += "<option value='" + item.value + "'>" + item.text + "</option>";
+                    });
+                    $("#city").html(items);
+                }
+            });
+    }
+
+    function create()
+    {
+        data: $("#form").serialize();
+        $.ajax(
+            {
+                url: '@Url.Action("CreateCustomer","Customer")',
+                type:'POST',
+                data:data,
+                success:function(data)
+                {
+                    console.log(data);
+                }
+            }
+        );
+    }
+</script>

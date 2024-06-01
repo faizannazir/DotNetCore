@@ -1,0 +1,190 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model AjaxNetCore.Models.Students;
+@{
+}
+<h4>Add Student Deatils</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form id="studenteForm" novalidate class="needs-validation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" type="text" class="form-control" id="name" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" type="email" class="form-control" id="email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" type="number" class="form-control" id="phone" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl" class="control-label"></label>
+                <input asp-for="ImageUrl"  class="form-control"/>
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" onclick="submitStudent()">Submit</button>
+            </div>
+        </form>
+    </div>
+
+  @*  <div class="col-md-4">
+        <form id="studenteGetForm" novalidate class="needs-validation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" type="text" class="form-control" id="name" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+           <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" type="email" class="form-control" id="email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" type="number" class="form-control" id="phone" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" onclick="getStudent()">Submit</button>
+            </div>
+        </form>
+    </div>*@
+</div>
+
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title text-capitalize text-center">
+                <h3> Students </h3>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="bg-dark text-white">
+@*                        <tr>
+                            <td>Name</td>
+                            <td>Email</td>
+                            <td>Phone</td>
+                        </tr>*@
+                            <tr>
+                                <td>@Html.DisplayNameFor(x => x.Name)</td>
+                                <td>@Html.DisplayNameFor(x => x.Email)</td>
+                                <td>@Html.DisplayNameFor(x => x.Phone)</td>
+                            </tr>
+                    </thead>
+                    <tbody id="res">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadStudent();
+    });
+    function loadStudent() {
+        var data = $("#studenteForm").serialize();
+        var res = $("#res");
+        //console.log(data);
+        alert(data);
+        $.ajax({
+            type: 'GET',
+            url: '/Home/Students',
+            //contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+            data: data,
+            //img: $("#img").serialize(),
+            success: function (result) {
+                //alert('Successfully received Data ');
+                //console.log(result);
+                $(result).each(function()
+                {
+                    res.append(`<tr>
+                    <td> ${this.name} </td>
+                    <td> ${this.email} </td>
+                    <td> ${this.phone} </td>
+                    </tr>`);
+                    console.log(this);
+
+                });
+            },
+            error: function () {
+                alert('Failed to receive the Data');
+                console.log('Failed ');
+            }
+        })
+    }
+
+
+    function submitStudent() {
+        var data = $("#studenteForm").serialize();
+        var res = $("#res");
+        //console.log(data);
+        //alert(data);
+        $.ajax({
+            type: 'POST',
+            url: '/Home/Create',
+            //contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+            data: data,
+            //img: $("#img").serialize(),
+            success: function (result) {
+                //alert('Successfully received Data ');
+                //console.log(result);
+                $(result).each(function () {
+                    res.append(`<tr>
+                        <td> ${this.name} </td>
+                        <td> ${this.email} </td>
+                        <td> ${this.phone} </td>
+                        </tr>`);
+                    console.log(this);
+
+                });
+            },
+            error: function () {
+                alert('Failed to receive the Data');
+                console.log('Failed ');
+            }
+        })
+    }
+    //function getStudent() {
+    //    var data = $("#name");
+    //    //console.log(data);
+    //    //alert(data);
+    //    $.ajax({
+    //        type: 'GET',
+    //        url: '/Home/Create',
+    //        //contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+    //        data: data,
+    //        success: function (result) {
+    //            alert('Successfully received Data ');
+    //            console.log(result);
+    //        },
+    //        error: function () {
+    //            alert('Failed to receive the Data');
+    //            console.log('Failed ');
+    //        }
+    //    })
+    //}
+</script>

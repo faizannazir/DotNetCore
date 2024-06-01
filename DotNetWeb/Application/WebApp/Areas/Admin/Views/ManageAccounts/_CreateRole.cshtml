@@ -1,0 +1,29 @@
+﻿@model RolesDto
+
+
+<div class="card carousel-dark">
+    <div class="card-body">
+        <div class="card-title text-center mb-3">
+            <h3>Create Role</h3>
+        </div>
+        <form id="myForm">
+            @* Model-level validation errors *@
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description" class="form-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+
+            <input type="button" class="btn btn-primary my-3 offset-5" value="submit" onclick="CreateRolePost()" />
+        </form>
+    </div>
+</div>

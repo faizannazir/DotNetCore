@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<AjaxNetCore.Models.Students>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title text-capitalize text-center">
+                <h3> Students </h3>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="bg-dark text-white">
+@*                        <tr>
+                            <td>Name</td>
+                            <td>Email</td>
+                            <td>Phone</td>
+                        </tr>*@
+                            <tr>
+                                <td>@Html.DisplayNameFor(x => x.Name)</td>
+                                <td>@Html.DisplayNameFor(x => x.Email)</td>
+                                <td>@Html.DisplayNameFor(x => x.Phone)</td>
+                            </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var s in Model)
+                        {
+                            @*@Html.DisplayFor(sModel =>s.Name)*@
+                            <tr>
+                                <td>@s.Name</td>
+                                <td>@s.Email</td>
+                                <td>@s.Phone</td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>

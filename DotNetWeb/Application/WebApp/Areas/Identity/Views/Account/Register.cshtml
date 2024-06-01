@@ -1,0 +1,84 @@
+﻿@model RegisterDto
+@{
+    ViewData["Title"] = "Register";
+}
+
+@*<h1>@ViewData["Title"]</h1>*@
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card p-4">
+                <div class="card-body shadow p-3">
+                <div class="card-title text-md-center">
+                    <h2>Create a new account.</h2>
+                    <hr />
+                </div>
+            
+                <form id="registerForm" method="post">
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                    <div class="row">
+                        <div class="form-floating mb-3 col-sm-6">
+                            <input asp-for="Name" class="form-control" aria-required="true" />
+                            <label asp-for="Name" class="px-3">Name</label>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3 col-sm-6">
+                            <input asp-for="Email" class="form-control" autocomplete="username" aria-required="true" />
+                            <label asp-for="Email" class="px-3">Email</label>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-floating mb-3 col-sm-6">
+                            <input asp-for="City" class="form-control" aria-required="true" />
+                            <label asp-for="City" class="px-3">City</label>
+                            <span asp-validation-for="City" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-floating mb-3 col-sm-6">
+                            <input asp-for="StreetAddress" class="form-control" aria-required="true" />
+                            <label asp-for="StreetAddress" class="px-3">Street Address</label>
+                            <span asp-validation-for="StreetAddress" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-floating mb-3 col-sm-6">
+                            <input asp-for="PostalCode" class="form-control" aria-required="true" />
+                            <label asp-for="PostalCode" class="px-3">Postal Code</label>
+                            <span asp-validation-for="PostalCode" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3 col-sm-6">
+                            <input asp-for="State" class="form-control" aria-required="true" />
+                            <label asp-for="State" class="px-3">State</label>
+                            <span asp-validation-for="State" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-floating mb-3 col-sm-6">
+                            <input asp-for="Password" class="form-control" autocomplete="new-password" aria-required="true" />
+                            <label asp-for="Password" class="px-3">Password</label>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3 col-sm-6">
+                            <input asp-for="ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
+                            <label asp-for="ConfirmPassword" class="px-3">Confirm Password</label>
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

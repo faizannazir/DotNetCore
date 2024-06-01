@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Student>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h3> List of Registered Students </h3>
+        </div>
+        <div class="col-6 ">
+            <a asp-area="" asp-controller="Home" asp-action="Create" class="btn btn-info">Create Student</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-responsive">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Action</th>
+                </tr>
+           
+            @foreach(var data in Model)
+            {
+                <tr>
+                    <td>@data.Id</td>
+                    <td>@data.Name</td>
+                    <td>@data.DegreeName</td>
+                    <td>@data.Age</td>
+                    <td>
+                        <a asp-controller="Home" asp-action="Edit" asp-route-id="@data.Id" class="mx-1 text-info">Edit</a> |
+                        <a asp-controller="Home" asp-action="Detail" asp-route-id="@data.Id" class="mx-1 text-info">Detail</a> |
+                        <a asp-controller="Home" asp-action="Delete" asp-route-id ="@data.Id" class="text-danger">Delete</a> |
+                    </td>
+                </tr>
+                }
+            </table>
+        </div>
+
+    </div>
+</div>
