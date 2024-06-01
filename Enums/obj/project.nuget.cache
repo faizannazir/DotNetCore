@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "3XcOzy8wJp8SM6H8knCmVFU15/BdMlZfitM3IBE2TMh6GtGRASCy0PiVon1kxNZW/K3d8YvamlTa1+uGsH4n4Q==",
+  "dgSpecHash": "41q0wNxJJ0Q=",
   "success": true,
   "projectFilePath": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\Enums\\Enums.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512"
+  ],
   "logs": []
 }

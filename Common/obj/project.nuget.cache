@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YQ3+UEWtOOPc0+gfCcVT4fTa3QZfCFdC47nZeRQKYeL1VCub/GFNdcfcc06HkBWJgFwZanAVJCpeAL4e98yEEA==",
+  "dgSpecHash": "ZVo2GkiqsOQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\Common\\Common.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,10 @@
     "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
-    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512"
   ],
   "logs": []
 }

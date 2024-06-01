@@ -1,0 +1,266 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{06BF8118-F8EB-48AC-A53E-A203A236E2FE}|DataAccess\\DataAccess.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\dataaccess\\appdbcontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BF8118-F8EB-48AC-A53E-A203A236E2FE}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\appdbcontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|solutionrelative:webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\webapp\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|solutionrelative:webapp\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\webapp\\webapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|solutionrelative:webapp\\webapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B13B467-4340-4FF3-AD98-E21C76407524}|Enums\\Enums.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\enums\\enums.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5B13B467-4340-4FF3-AD98-E21C76407524}|Enums\\Enums.csproj|solutionrelative:enums\\enums.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\webapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\webapp\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|solutionrelative:webapp\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74003F7A-7933-4AC8-998C-9C301DE1812F}|Common\\Common.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\common\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74003F7A-7933-4AC8-998C-9C301DE1812F}|Common\\Common.csproj|solutionrelative:common\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06BF8118-F8EB-48AC-A53E-A203A236E2FE}|DataAccess\\DataAccess.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\dataaccess\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06BF8118-F8EB-48AC-A53E-A203A236E2FE}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\webapp\\areas\\customer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|solutionrelative:webapp\\areas\\customer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\webapp\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|solutionrelative:webapp\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\webapp\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|solutionrelative:webapp\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B13B467-4340-4FF3-AD98-E21C76407524}|Enums\\Enums.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\enums\\userroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B13B467-4340-4FF3-AD98-E21C76407524}|Enums\\Enums.csproj|solutionrelative:enums\\userroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{651EB056-65E9-44A3-9835-47852CD92551}|DataTransferObject\\DataTransferObject.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\datatransferobject\\product\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{651EB056-65E9-44A3-9835-47852CD92551}|DataTransferObject\\DataTransferObject.csproj|solutionrelative:datatransferobject\\product\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|c:\\users\\hp 840 g5\\source\\repos\\application\\webapp\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EB08EC6-33D3-46E6-9F47-D8919E7C5201}|WebApp\\WebApp.csproj|solutionrelative:webapp\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Enums.csproj",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\Enums\\Enums.csproj",
+              "RelativeDocumentMoniker": "Enums\\Enums.csproj",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\Enums\\Enums.csproj",
+              "RelativeToolTip": "Enums\\Enums.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2023-06-15T10:18:47.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WebApp.csproj",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\WebApp.csproj",
+              "RelativeDocumentMoniker": "WebApp\\WebApp.csproj",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\WebApp.csproj",
+              "RelativeToolTip": "WebApp\\WebApp.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2023-06-15T09:14:29.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\DataAccess\\AppDbContext\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "DataAccess\\AppDbContext\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\DataAccess\\AppDbContext\\ApplicationDbContext.cs",
+              "RelativeToolTip": "DataAccess\\AppDbContext\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-15T08:14:50.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Program.cs",
+              "RelativeDocumentMoniker": "WebApp\\Program.cs",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Program.cs",
+              "RelativeToolTip": "WebApp\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-15T07:08:35.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "WebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAABEAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-06-15T07:26:07.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-06-15T09:49:59.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "WebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "WebApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAiwJQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-15T07:26:12.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\DataAccess\\Entities\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Entities\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\DataAccess\\Entities\\ApplicationUser.cs",
+              "RelativeToolTip": "DataAccess\\Entities\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-15T07:14:47.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\Common\\EmailSender.cs",
+              "RelativeDocumentMoniker": "Common\\EmailSender.cs",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\Common\\EmailSender.cs",
+              "RelativeToolTip": "Common\\EmailSender.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-15T08:08:22.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserRoles.cs",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\Enums\\UserRoles.cs",
+              "RelativeDocumentMoniker": "Enums\\UserRoles.cs",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\Enums\\UserRoles.cs",
+              "RelativeToolTip": "Enums\\UserRoles.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-15T07:08:08.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\DataTransferObject\\Product\\ProductDto.cs",
+              "RelativeDocumentMoniker": "DataTransferObject\\Product\\ProductDto.cs",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\DataTransferObject\\Product\\ProductDto.cs",
+              "RelativeToolTip": "DataTransferObject\\Product\\ProductDto.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-09T14:52:30.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Areas\\Customer\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebApp\\Areas\\Customer\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Areas\\Customer\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebApp\\Areas\\Customer\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAwBoAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-09T14:46:07.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeToolTip": "WebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-06-15T07:13:45.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "WebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeToolTip": "WebApp\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-15T07:13:57.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "WebApp\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAB0AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-06-09T14:49:40.676Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

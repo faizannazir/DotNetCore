@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rggTeoYD5Yo3zjPE6esjc94ZH2c2mbCdGJj9KTwmfv9ye8b0faTlhTF+UC18W4UN81Bdf1N7AHJfrRv+QTG8IA==",
+  "dgSpecHash": "sgNNG0Bprww=",
   "success": true,
   "projectFilePath": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\WebApp\\WebApp.csproj",
   "expectedPackageFiles": [
@@ -231,7 +231,11 @@
     "C:\\Users\\hp 840 G5\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\hp 840 G5\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\hp 840 G5\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\hp 840 G5\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.19\\microsoft.netcore.app.host.win-x64.7.0.19.nupkg.sha512"
   ],
   "logs": []
 }

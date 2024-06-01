@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using WebApp;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using DataAccess.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,15 +17,18 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ApplicationDbContext>(Options => Options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
-builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<ApplicationUser,IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultUI()
+    .AddDefaultTokenProviders();
 
 RegisterServices.ConfigureApplicationServices(builder);
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
-    options.Cookie.Name = "YourAppCookieName";
-    options.Cookie.HttpOnly = true;
+    //options.Cookie.Name = "YourAppCookieName";
+    //options.Cookie.HttpOnly = true;
     options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
     options.LoginPath = "/Identity/Account/Login";
     options.LogoutPath = "/Identity/Account/Logout";

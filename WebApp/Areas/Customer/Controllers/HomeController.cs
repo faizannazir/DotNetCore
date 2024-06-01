@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Bussiness.ProductServices;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebApp.Models;
 
@@ -7,18 +9,22 @@ namespace WebApp.Areas.Customer.Controllers
     [Area("Customer")]
     public class HomeController : Controller
     {
+        private readonly IProductServices _productServices;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IProductServices productServices)
         {
             _logger = logger;
+            _productServices = productServices;
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View(_productServices.GetAllProducts());
         }
 
+
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();

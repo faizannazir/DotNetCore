@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dMes2e33rKrZCYuFwQMu0uvl2sq0TRYPwXLuAIlV0PXZYvffk/2UgxsEt4G2JuSWM9fhoeFltrAlvK/91mF7dQ==",
+  "dgSpecHash": "+bDQBINeSvA=",
   "success": true,
   "projectFilePath": "C:\\Users\\hp 840 G5\\source\\repos\\Application\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
@@ -69,7 +69,10 @@
     "C:\\Users\\hp 840 G5\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\hp 840 G5\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\hp 840 G5\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\hp 840 G5\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\hp 840 G5\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512"
   ],
   "logs": []
 }

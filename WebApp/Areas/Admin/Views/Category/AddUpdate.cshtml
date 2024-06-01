@@ -6,7 +6,7 @@
 <div class="card carousel-dark"> 
     <div class="card-body">
         <div class="card-title text-center mb-3">
-            <h3>@(Model?.Id != Guid.Empty ? "Update" : "Create") Category</h3>
+            <h3>@(Model.Id != Guid.Empty || Model.Id != null ? "Update" : "Create") Category</h3>
         </div>
         <form  id="myForm">
             <input asp-for="Id" name="Id" type="hidden"/>
